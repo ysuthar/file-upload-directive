@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NumberSpinnerDirective } from './number-spinner.directive'
+import { FileUplaodDirectiveDirective } from './file-upload-directive'
+import { FileUplaodInputDirective } from './file-upload-directive'
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, NumberSpinnerDirective ],
+  declarations: [ AppComponent, FileUplaodDirectiveDirective, FileUplaodInputDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

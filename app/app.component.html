@@ -5,32 +5,62 @@
 <br>
 <div class="card">
                   <div class="card-header">
-                      <h1 class="card-title">Number Spinner Directives</h1>
+                      <h1 class="card-title">File Upload Directive</h1>
+                      <h3>Static UI display</h3>
                   </div>
                   <div class="card-content card-body">
 
+<!-- File uplaod Component -->
+        <div FileUplaod>
+          <input type='file' class="FileUplaod" FileUplaodInput>
 
-<!-- Number Spinner Component -->
-  <div NumberSpinnerDirective>
-      <form class="form-inline">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <button class="minus btn btn-primary">-</button>
-            </div>
-            
-            <input class="numberValue form-control text-center" type="number" id="number" value="1"/>
-                  
-            <div class="input-group-append">
-              <button class="plus btn btn-primary">+</button>
+          <div class="FileSuccess" style="display: none">
+            <div class="row">
+              <div class="col-6">
+                <figure class="figure"><img [src]="" height="200" class="img-fluid"></figure>
+                <figcaption class="figure-caption">Size: <span class="img-size"></span></figcaption>
+              </div>
+              <div class="col">
+                <h4 class="img-name"></h4>
+                <strong class="text-success">Uploaed Successfully</strong>
+                <div class="form-group">
+                 <button class="viewImage btn btn-primary">View</button> &nbsp;
+                 <button class="remove btn btn-danger" >Remove</button>
+
+                </div>
+              </div>
             </div>
           </div>
-      </form>
-  </div>
-<!-- Number Spinner Component -->
+        </div>
+<!-- File uplaod Component -->
+
+<hr>
+<!-- File uplaod Component -->
+        <div FileUplaod>
+          <input type='file' class="FileUplaod" FileUplaodInput>
+
+          <div class="FileSuccess" style="display: none">
+            <div class="row">
+              <div class="col-6">
+                <figure class="figure"><img [src]="" style="max-height:200px" class="img-fluid"></figure>
+                <figcaption class="figure-caption">Size: <span class="img-size"></span></figcaption>
+              </div>
+              <div class="col">
+                <h4 class="img-name"></h4>
+                <strong class="text-success">Uploaded Successfully</strong>
+                <div class="form-group">
+                 <button class="viewImage btn btn-primary">View</button> &nbsp;
+                 <button class="remove btn btn-danger" >Remove</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- File uplaod Component -->
+</div>
+</div>
 
 </div>
-</div>
-</div>
-
 </div>
 </div>
