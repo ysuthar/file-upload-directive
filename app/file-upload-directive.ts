@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Directive({
   selector: '[FileUplaod]'
 })
-export class FileUplaodDirectiveDirective {
+export class  FileUploadDirectiveDirective {
   url = '';
   file = ''
   img;
@@ -20,8 +20,8 @@ export class FileUplaodDirectiveDirective {
   click(event) {
     if(event.target.classList.contains('remove')){
       this.elRef.nativeElement.getElementsByClassName('FileSuccess').item(0).style.display='none';
-      this.elRef.nativeElement.getElementsByClassName('FileUplaod').item(0).style.display='block';
-      this.elRef.nativeElement.getElementsByClassName('FileUplaod').item(0).value = '';
+      this.elRef.nativeElement.getElementsByClassName('FileUpload').item(0).style.display='block';
+      this.elRef.nativeElement.getElementsByClassName('FileUpload').item(0).value = '';
     }
 
     if(event.target.classList.contains('viewImage')){
@@ -40,11 +40,11 @@ export class FileUplaodDirectiveDirective {
 
 }
 
-@Directive({ selector: '[FileUplaodInput]'})
+@Directive({ selector: '[FileUploadInput]'})
 
-export class FileUplaodInputDirective {
+export class FileUploadInputDirective {
 
-  @ContentChildren(FileUplaodDirectiveDirective) uploaded;
+  @ContentChildren(FileUploadDirectiveDirective) uploaded;
 
   url = '';
   NumberElement;
