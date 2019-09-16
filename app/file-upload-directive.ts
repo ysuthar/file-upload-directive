@@ -46,7 +46,7 @@ export class FileUploadInputDirective {
 
   @ContentChildren(FileUploadDirectiveDirective) uploaded;
 
-  url = '';
+  url;
   NumberElement;
   numberValue;
   img;
@@ -67,8 +67,7 @@ export class FileUploadInputDirective {
       reader.readAsDataURL(event.target.files[0]); 
       reader.onload = (event) => { 
       var img = new Image;
-      this.url = event.target.result;
-
+      this.url = reader.result;
       // **//
 
 
@@ -76,8 +75,8 @@ export class FileUploadInputDirective {
       this.strsubstring = FileName.substring(FileName.lastIndexOf("."), FileName.length);
                         if (this.strsubstring == '.jpg' || this.strsubstring == '.png' || this.strsubstring == '.jpeg' || this.strsubstring == '.gif')
                         {
-                          this.elRef.nativeElement.parentElement.getElementsByTagName('img').item(0).src = event.target.result;
-                          this.elRef.nativeElement.parentElement.getElementsByClassName('viewImage').item(0).href = event.target.result;
+                          this.elRef.nativeElement.parentElement.getElementsByTagName('img').item(0).src = reader.result;
+                          this.elRef.nativeElement.parentElement.getElementsByClassName('viewImage').item(0).href = reader.result;
                           this.elRef.nativeElement.parentElement.getElementsByClassName('img-size').item(0).innerHTML = (Filesize + 'KB');
                           this.elRef.nativeElement.parentElement.getElementsByClassName('img-name').item(0).innerHTML = FileName;
                           this.elRef.nativeElement.parentElement.getElementsByClassName('FileSuccess').item(0).style.display='block';
