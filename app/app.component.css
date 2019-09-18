@@ -4,3 +4,18 @@ p {
 
 .FileSuccess img {max-height: 200px}
 .text-success {margin:10px 0; display: block;}
+
+.modelPopup{display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%}
+.modal-dialog {max-width: 500px;margin: 1.75rem auto;}
+/* Model Popup Starts*/
+.modal.show {opacity: 1;display: block}
+.modal.show .modal-dialog{ -webkit-transform: translate(0,100%); transform: translate(0,100%);}
+.modal .modal-content { border: none; border-top: solid 5px #ffd400; border-bottom: solid 5px #ffd400; border-radius: 0;}
+.modal .modal-footer { justify-content: center; border: none; padding: 20px;}
+.modal .modal-body {font-size: 20px; min-height: 100px; display: table;}
+.modal .modal-body p {display: table-cell; vertical-align: middle;}
+.modal.show .modal-dialog{-webkit-transform: translate(0,0);transform: translate(0,0); opacity: 1;}
+.modal.show .modal-body { padding: 2rem;}
+.modal.show .modal-body h3{padding-bottom: 0.5em;}
+.modal.show .modal-body img {max-width: 100%; max-height:none}
+/* Model Popup Ends*/
