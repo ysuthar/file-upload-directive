@@ -95,13 +95,13 @@ export class FileUploadInputDirective {
                           this.elRef.nativeElement.style.display='none';
 
 
-                          var HTMLTemplate = '<div class="modelPopup"><bs-modal-backdrop class="modal-backdrop fade in show"></bs-modal-backdrop><modal-container class="modal fade show" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="btn-close pull-right" aria-label="Close">Remove</button></div><div class="modal-body document-popup"><h6>'+
+                          var HTMLTemplate = '<bs-modal-backdrop class="modal-backdrop fade in show"></bs-modal-backdrop><modal-container class="modal fade show" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="btn-close pull-right" aria-label="Close">Remove</button></div><div class="modal-body document-popup"><h6>'+
                           FileName +
                           '</h6><figure><img src="' + 
                           reader.result + 
-                          '" class="card-img blur-img" alt="Driving Licence"></figure></div></div></div></modal-container></div>'
+                          '" class="card-img blur-img" alt="Driving Licence"></figure></div></div></div></modal-container>'
                       
-                          this.elRef.nativeElement.parentElement.getElementsByClassName('FileSuccess').item(0).insertAdjacentHTML('beforeend', HTMLTemplate) ;
+                          this.elRef.nativeElement.parentElement.getElementsByClassName('modelPopup').item(0).insertAdjacentHTML('beforeend', HTMLTemplate) ;
                           //document.body.innerHTML + a;
 
                         }
